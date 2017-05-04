@@ -1,0 +1,1 @@
+{"raul": {"question": "3", "devices": ["MSM8225QRD5", "TA20702B4Y"], "user": "raul", "answer": "none", "password": "pi", "permissions": "3"}, "pi": {"question": "0", "devices": ["TA20702B4Y"], "user": "pi", "answer": "none", "password": "pi", "permissions": "0"}}

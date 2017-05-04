@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robotConfig>
+    <components>
+        <component name="LeftMotor" class="IrobotLeftMotor" genericDevice="Motor"/>
+        <component name="RightMotor" class="IrobotRightMotor" genericDevice="Motor"/>
+        <component name="Speaker" class="Speaker" genericDevice="Speaker"/>
+    </components>
+    <sensors>
+        <sensor name="LeftBumper" class="LeftBumper" genericDevice="Sensor"/>
+        <sensor name="RightBumper" class="RightBumper" genericDevice="Sensor"/>
+        <sensor name="LeftWheeldrop" class="LeftWheeldrop" genericDevice="Sensor"/>
+        <sensor name="CasterWheeldrop" class="CasterWheeldrop" genericDevice="Sensor"/>
+        <sensor name="RightWheeldrop" class="RightWheeldrop" genericDevice="Sensor"/>
+        <sensor name="Wall" class="Wall" genericDevice="Sensor"/>
+        <sensor name="CliffLeft" class="CliffLeft" genericDevice="Sensor"/>
+        <sensor name="CliffFrontLeft" class="CliffFrontLeft" genericDevice="Sensor"/>
+        <sensor name="CliffFrontRight" class="CliffFrontRight" genericDevice="Sensor"/>
+        <sensor name="CliffRight" class="CliffRight" genericDevice="Sensor"/>
+        <sensor name="VirtualWall" class="VirtualWall" genericDevice="Sensor"/>
+        <sensor name="Infrared" class="Infrared" genericDevice="Sensor"/>
+        <sensor name="PlayButton" class="PlayButton" genericDevice="Sensor"/>
+        <sensor name="AdvanceButton" class="AdvanceButton" genericDevice="Sensor"/>
+        <sensor name="Distance" class="Distance" genericDevice="Sensor"/>
+        <sensor name="Angle" class="Angle" genericDevice="Sensor"/>
+        <sensor name="BatteryChargeLevel" class="BatteryChargeLevel" genericDevice="Sensor"/>
+    </sensors>
+    <publicMethods>
+        <method name="forward"  class = "ForwardService" params="int:velocity" returns="" description="Move forward" dependencies="LeftMotor,RightMotor"/>
+        <method name="backward"  class = "BackwardService" params="int:velocity" returns="" description="Move backward" dependencies="LeftMotor,RightMotor"/>
+        <method name="turnLeft"  class = "TurnLeftService" params="int:velocity,int:direction" returns="" description="Turn Left" dependencies="LeftMotor,RightMotor"/>
+        <method name="turnRight"  class = "TurnRightService" params="int:velocity,int:direction" returns="" description="Turn Right" dependencies="LeftMotor,RightMotor"/>
+        <method name="stop"  class = "StopService" params="" returns="" description="Stop" dependencies="LeftMotor,RightMotor"/>
+
+        <method name="batteryLevel"  class = "BatteryChargeLevelService" params="" returns="int:value" description="Return the actual Battery Charge Level" dependencies="BatteryChargeLevel"/>
+        <method name="leftBumper"  class = "LeftBumperService" params="" returns="int:value" description="Return if the Left Bumper is actioned or not" dependencies="LeftBumper"/>
+        <method name="rightBumper"  class = "RightBumperService" params="" returns="int:value" description="Return if the Right Bumper is actioned or not" dependencies="RightBumper"/>
+    </publicMethods>
+</robotConfig>

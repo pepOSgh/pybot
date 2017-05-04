@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pybotConfig>
+    <RobotConfigFile name="robotConfig.xml"/>
+    <ControllersModule name="irobot"/>
+    <Behavior name="AvoidObstacles"/>
+    <Server address="127.0.0.1" port="5000" services="services"/>
+</pybotConfig>

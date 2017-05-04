@@ -1,0 +1,33 @@
+from ConnectivityManager import *
+import Queue
+from threading import Thread
+
+
+class A:
+    def __init__(self):
+        pass
+
+    def getCapabilities(self):
+        caps = [{"name":"uno", "params":"int, int", "nature":"in", "description":"Suma a con b"}, 
+                 {"name":"dos", "params":"", "nature":"out", "description":"Imprime un carlet"}]
+        return caps
+
+    def uno(self):
+        print "dos called"
+
+    def dos(self, a, b):
+        print "result: ", a+b
+        
+
+conn = ConnectivityManager()
+a = A()
+conn.join(a)
+
+while True:
+    try:
+        conn.startListening()
+        conn.startReading()
+    except Exception, e:
+        print e
+        print "Wait a seconds ..."
+        sleep(1)
